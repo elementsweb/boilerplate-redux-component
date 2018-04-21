@@ -10,7 +10,7 @@ const update = (namespace = 'default') => (state = initialState, action) => {
     case `@@component/${namespace}/${INCREMENT_COUNTER}`:
       return state + 1;
 
-      case `@@component/${namespace}/${DECREMENT_COUNTER}`:
+    case `@@component/${namespace}/${DECREMENT_COUNTER}`:
       return state - 1;
 
     default:
