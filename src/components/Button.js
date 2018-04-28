@@ -11,19 +11,19 @@ export const Button = ({ children, counter, increment }) => (
 Button.propTypes = {
   children: PropTypes.string,
   counter: PropTypes.number,
-  increment: PropTypes.func.isRequired
+  increment: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state, ownProps) =>
   // state contains local state for component, selected by the
   // config.selectState() function passed to the component
-  return {
-    counter: ownProps.selectState(state)
-  }
-}
+  ({
+    counter: ownProps.selectState(state),
+  });
+
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  increment: () => dispatch(incrementCounter(ownProps.namespace))
+  increment: () => dispatch(incrementCounter(ownProps.namespace)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Button);

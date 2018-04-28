@@ -10,7 +10,7 @@ describe('<Button />', () => {
   beforeEach(() => {
     props = {
       counter: 0,
-      increment: jest.fn()
+      increment: jest.fn(),
     };
   });
 

@@ -4,7 +4,8 @@
   "description": "Boilerplate project for a React component with Redux",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest",
+    "test": "./node_modules/bin/jest",
+    "lint": "./node_modules/.bin/eslint src",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook --output-dir docs"
   },
@@ -29,6 +30,7 @@
     "redux": "^4.0.0"
   },
   "devDependencies": {
+    "@j154004/eslint-config": "^1.0.1",
     "@storybook/addon-actions": "^3.4.2",
     "@storybook/addon-links": "^3.4.2",
     "@storybook/addons": "^3.4.2",
@@ -42,6 +44,7 @@
     "css-loader": "^0.28.11",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.19.1",
     "jest": "^22.4.3",
     "jest-cli": "^22.4.3",
     "node-sass": "^4.8.3",
